@@ -25,7 +25,7 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 
 
 ### NodeJS
-![Instructions Screencast](http://g.recordit.co/cfFbTlEuLa.gif)
+![Instructions Screencast](https://github.com/datafiniti/infra-coding-challenge/blob/master/screencasts/nodejs-screencast.gif)
 
 1. From within the `coding-challenge` directory, run `./bin/setup-nodejs.sh`
 2. Once the output is done printing to the terminal click on this [link](http://localhost:5601).

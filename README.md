@@ -21,7 +21,7 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
   - Elasticsearch
   - Kibana. This is a fancy web UI that you can use to monitor import metrics in order to benchmark your solution
   - A dev container with either java or nodejs installed depending on which you decide to use
-- Run one of the following commands depending on what language you've decided to use.
+- Follow the instructions below for your language of choice
 
 
 ### NodeJS

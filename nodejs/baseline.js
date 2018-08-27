@@ -5,7 +5,7 @@ const { createRecord, setupElasticsearch } = require('./utils');
 
 (async () => {
     await setupElasticsearch();
-    await seedRedis();
+    await seedRedis(10000);
     await importRecords();
 })();
 
@@ -23,17 +23,17 @@ async function importRecords() {
     await redis.disconnect();
 }
 
-async function seedRedis() {
+async function seedRedis(numRecords) {
     const redis = new Redis({ host: 'redis' });
     
     console.log('flushing redis');
     await redis.flushall();
     
-    for (let i = 0; i < 100000; i += 1) {
+    for (let i = 0; i < numRecords; i += 1) {
     
         await redis.rpush('records', JSON.stringify(createRecord()));
 
-        if (i % 10000 === 0) {
+        if (i % (numRecords / 10) === 0) {
             console.log(`${i} records seeded in redis`);
         }
     }

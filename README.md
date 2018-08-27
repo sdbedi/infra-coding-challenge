@@ -32,20 +32,20 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 3. Click the Monitoring button on the far left
 4. Click `Enable Monitoring`
 5. Open another terminal and type in `docker exec -it node-dev bash`
-  - This is equivalent to `ssh`ing into a virtual machine that has nodejs installed
+    - This is equivalent to `ssh`ing into a virtual machine that has nodejs installed
 6. To run the code we've provided run the following commands
 
-  ```bash
-  cd code
-  npm install
-  node baseline.js
-  ```
-  - This code will seed 10,000 product records into redis and then begin to import one record at a time into elasticsearch
+    ```bash
+    cd code
+    npm install
+    node baseline.js
+    ```
+    - This code will seed 10,000 product records into redis and then begin to import one record at a time into elasticsearch
 7. Head over to the browser window that you have kibana open in
 8. Click on indices and then records
 9. Watch the Indexing Rate graph to see how fast the provided solution is.
-  - You'll be using this graph to benchmark your solution
-  - Your solution will be assessed by first running `baseline.js` and then your solution. If the graph indicates that your solution is indexing records faster than the baseline then Congratulations! you did it.
+    - You'll be using this graph to benchmark your solution
+    - Your solution will be assessed by first running `baseline.js` and then your solution. If the graph indicates that your solution is indexing records faster than the baseline then Congratulations! you did it.
 10. Provide your solution in a file named `solution.js`.
 
 ### Java
@@ -55,23 +55,23 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 3. Click the Monitoring button on the far left
 4. Click `Enable Monitoring`
 5. Open another terminal and type in `docker exec -it java-dev bash`
-  - This is equivalent to `ssh`ing into a virtual machine that has java installed
+    - This is equivalent to `ssh`ing into a virtual machine that has java installed
 6. To run the code we've provided run the following commands
 
-  ```bash
-  cd code
+    ```bash
+    cd code
 
-  # This command will compile the baseline solution we provide to you and run it.
-  ./bin/run.sh
-  ```
-  - This code will seed 10,000 product records into redis and then begin to import one record at a time into elasticsearch
+    # This command will compile the baseline solution we provide to you and run it.
+    ./bin/run.sh
+    ```
+    - This code will seed 10,000 product records into redis and then begin to import one record at a time into elasticsearch
 7. Head over to the browser window that you have kibana open in
 8. Click on indices and then records
 9. Watch the Indexing Rate graph to see how fast the provided solution is.
-  - You'll be using this graph to benchmark your solution
-  - Your solution will be assessed by first running `Baseline` and then your solution. If the graph indicates that your solution is indexing records faster than the baseline then Congratulations! you did it.
+    - You'll be using this graph to benchmark your solution
+    - Your solution will be assessed by first running `Baseline` and then your solution. If the graph indicates that your solution is indexing records faster than the baseline then Congratulations! you did it.
 10. Provide your solution in a class named `Solution`. Make sure that we can run your solution from the `Main` class.
-  - You can run your code using `./bin/run.sh` so long as you run your solution from within `Main`
+    - You can run your code using `./bin/run.sh` so long as you run your solution from within `Main`
 
 
 ## Cleanup and Submission

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  node-dev:
+    container_name: node-dev
+    image: node:10.4.0-stretch
+    networks:
+      - devnet
+    command: sleep infinity
+    volumes:
+      - ../nodejs:/code
+      - ../records.json:/records.json
+      - /code/node_modules

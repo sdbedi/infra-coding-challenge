@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  java-dev:
+    container_name: java-dev
+    image: openjdk:8
+    networks:
+      - devnet
+    command: sleep infinity
+    volumes:
+      - ../java:/code
+      - ../records.json:/records.json

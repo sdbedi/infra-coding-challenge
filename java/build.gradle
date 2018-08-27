@@ -1,0 +1,34 @@
+apply plugin: "idea"
+apply plugin: "java"
+apply plugin: "maven"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.9'
+}
+
+processResources {
+    from('../records.json')
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'redis.clients:jedis:2.9.0'
+    compile 'org.elasticsearch.client:elasticsearch-rest-high-level-client:6.4.0'
+    compile 'org.apache.logging.log4j:log4j-core:2.11.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+}
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.toURI().toString().replaceAll("file:", "") }.join(' '),
+      'Main-Class': 'com.datafiniti.importer.Main'
+    )
+  }
+
+  baseName 'importer'
+}
+

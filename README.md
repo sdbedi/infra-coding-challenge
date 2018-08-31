@@ -78,7 +78,7 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 
 ## Cleanup and Submission
 - Once you're done, from within the `coding-challenge` directory, run `./bin/teardown.sh` in order to delete all containers and volumes
-- Create a pull request with your submission and we'll take a look ASAP!
+- Send over an email with a link to your forked repo and we'll take a look ASAP!
 
 ## Hints
 - Speeding up the import rate does not require some fancy algorithm or data strucuture. 

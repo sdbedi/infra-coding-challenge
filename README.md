@@ -48,7 +48,7 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 9. Watch the Indexing Rate graph to see how fast the provided solution is.
    - You'll be using this graph to benchmark your solution
    - Your solution will be assessed by first running `baseline.js` and then your solution. If the graph indicates that your solution is indexing records faster than the baseline then Congratulations! you did it.
-10. Provide your solution in a file named `solution.js`.
+10. Include a file named `solution.js` that runs your solution. Including more than 1 file is perfectly fine so long as we can kick everything off by running `node solution.js`
 
 ### Java
 ![Instructions Screencast](https://github.com/datafiniti/infra-coding-challenge/blob/master/screencasts/java-screencast.gif)
@@ -72,7 +72,7 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 9. Watch the Indexing Rate graph to see how fast the provided solution is.
    - You'll be using this graph to benchmark your solution
    - Your solution will be assessed by first running `Baseline` and then your solution. If the graph indicates that your solution is indexing records faster than the baseline then Congratulations! you did it.
-10. Provide your solution in a class named `Solution`. Make sure that we can run your solution from the `Main` class.
+10. Provide a way for us to start your solution in a class named `Solution`. You can include all of your solution in that class or create additional classes as you see fit. Just make sure that we can run your solution from the `Main` class by doing something like `Solution.start()` or `Solution.run()`.
     - You can run your code using `./bin/run.sh` so long as you run your solution from within `Main`
 
 
@@ -82,3 +82,7 @@ To reiterate, our goal is to get data, in the form of json objects, from point A
 
 ## Hints
 - Speeding up the import rate does not require some fancy algorithm or data strucuture. 
+- We will be trying your solution against different amounts of seeded records, likely somwhere between 10,000 - 50,000. Make sure your solution isn't hardcoded for just 10,000 records.
+
+
+Good Luck!
